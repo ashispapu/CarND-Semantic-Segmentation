@@ -33,7 +33,7 @@ def load_vgg(sess, vgg_path):
     vgg_layer4_out_tensor_name = 'layer4_out:0'
     vgg_layer7_out_tensor_name = 'layer7_out:0'
 	
-	buff = tf.saved_model.loader.load(sess, [vgg_tag], vgg_path)
+    buff = tf.saved_model.loader.load(sess, [vgg_tag], vgg_path)
     
     image_input = tf.get_default_graph().get_tensor_by_name(vgg_input_tensor_name)
     
